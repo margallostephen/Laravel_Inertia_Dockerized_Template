@@ -1,15 +1,27 @@
-Clone the project
+# Laravel Inertia Dockerized Template
 
+## 🚀 Getting Started
+
+### 1. Clone the Project
+
+```bash
 git clone https://github.com/margallostephen/Laravel_Inertia_Dockerized_Template.git
-
 cd Laravel_Inertia_Dockerized_Template
+```
 
-Setup the application
+---
 
-copy .env.example and rename to .env
+### 2. Setup the Application
 
-Paste the value 
+Copy `.env.example` and rename it to `.env`:
 
+```bash
+cp .env.example .env
+```
+
+Then paste the following values into your `.env` file:
+
+```env
 DB_CONNECTION=pgsql
 DB_HOST=postgres
 DB_PORT=5432
@@ -30,27 +42,27 @@ REDIS_PORT=6379
 MAIL_MAILER=smtp
 MAIL_SCHEME=null
 MAIL_HOST=mailpit
+```
 
-run in cli 
+---
 
-make up           - start the containers
+### 3. Run the Following Commands
 
-make install      - install composer dependencies
+| Command           | Description                        |
+|-------------------|------------------------------------|
+| `make up`         | Start the containers               |
+| `make install`    | Install Composer dependencies      |
+| `make key`        | Generate application key           |
+| `make migrate`    | Set up the database                |
+| `make fresh-node` | Install Node packages              |
+| `make dev`        | Run the development server         |
+| `make perm`       | Fix permission issues              |
 
-make key          - generate key
+---
 
-make migrate      - setup database
+## 🌐 Access the Application
 
-make fresh-node   - install packages
-
-make dev          - run dev
-
-make perm         - fix permission issue
-
-After setting up you may access the application at
-
-http://localhost:8000/
-
-Access the mail pit client
-
-http://localhost:8025/
+| Service       | URL                          |
+|---------------|------------------------------|
+| Application   | http://localhost:8000/       |
+| Mailpit Client| http://localhost:8025/       |
